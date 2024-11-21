@@ -1,0 +1,9 @@
+---
+  title: "Bitacoras Grupo #07, CA-204 (II-2024)"
+  author: "Jose Ricardo Acuna"
+  date: "2024-11-21"
+---
+
+# Análisis de la evolución de los reclamos del Seguro Obligatorio Automotor en Costa Rica para el periodo 2017-2024. Introducción {.unnumbered}
+
+La gestión del riesgo asociado a los seguros de automóviles, especialmente bajo esquemas obligatorios como el Seguro Obligatorio de Automotores (SOA) en Costa Rica, representa un desafío significativo para las entidades aseguradoras. El SOA es esencial no solo para cubrir gastos médicos derivados de accidentes de tráfico, sino también como componente clave del portafolio del Instituto Nacional de Seguros (INS). Este contexto subraya la necesidad de emplear metodologías actuariales avanzadas que promuevan la sostenibilidad financiera del seguro.En este trabajo se pretende analizar la evolución de los reclamos del Seguro Obligatorio Automotor en Costa Rica para el periodo entre 2017-2024 

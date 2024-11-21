@@ -23,6 +23,7 @@ Mes <- Mes2[1:(length(Mes2) - 4)]
 
 reclamos$Year <- anos
 reclamos$Mes <- Mes
+
 #Los valores mensuales permiten ver estacionalidad y los anuales tendencia.
 reclamoss <- head(reclamos)
 reclamos2 <- reclamoss[,1:7]
@@ -37,7 +38,7 @@ ggplot(reclamos)+geom_point(aes(x=Fecha, y=Total))+geom_line(aes(x=Fecha, y=Tota
                                                                                                                                                                                                                                         subtitle = "Reclamos Seguro Obligatorio de Vehículos Automotores (SOA)",
                                                                                                                                                                                                                                         caption = "Fuente: Elaboración propia con datos de SUGESE")+
   xlab("Fecha de reclamo")+ 
-  ylab("Total de reclamos")
+  ylab("Total de reclamos") + theme_minimal()
 
 ggplot(mutate(reclamos, Year = as.character(Year))) + 
   geom_line(aes(
@@ -77,38 +78,66 @@ theme(legend.position = "none")
                                     color = "blue", 
                                     size = 10,
                                     face = 2))
-
-ggplot(pivot_longer(select(reclamos, Motos, Particular, Fecha), cols = c("Particular", "Motos"), names_to = "Tipo", values_to = "Reclamos"), aes(x=Fecha, y=Reclamos, colour = Tipo))+geom_line()+geom_point()+  labs(title="Reclamos mensuales al SOA, vehículos particulares y motos.",
-                                                                                                                                                                                                                      caption = "Fuente: Elaboración propia con datos de SUGESE")+
-  xlab("Fecha de reclamo") + 
-  ylab("Total de reclamos")+
-  theme(legend.position="bottom")+scale_color_hue(labels = c( "Motos","Auto Particular"))+theme(legend.background = element_rect(fill = "lightblue", # Fondo
-                                                                                                                                 colour = 1))+        # Borde
-  theme(legend.title = element_text(family = "Roboto",
-                                    color = "blue", 
-                                    size = 10,
-                                    face = 2))
-
-ggplot(mutate(reclamos, Year = as.character(Year), Mes = as.integer(Mes) ))+geom_point(aes(x=Mes, y=Total, color=Year))+
-  geom_line(aes(x=Mes, y=Total, color=Year))+labs(title="Número de reclamos totales por año",
-                                                  subtitle = "Reclamos Seguro Obligatorio de Vehículos Automotores (SOA)",
-                                                  caption = "Fuente: Elaboración propia con datos de SUGESE)")+
-  xlab("Mes de reclamo") + 
-  ylab("Total de reclamos")+theme(legend.position="bottom")
-
-
-
-ggplot(pivot_longer(select(reclamos, -No_identificado, -Equipo_Especial, - Particular, -Motos), cols = c("Taxis",  "Carga_Liviana", "Carga_Pesada", "Bus_remunerado"), names_to = "Tipo", values_to = "Reclamos"), aes(x=Fecha, y=Reclamos, colour = Tipo))+geom_line()+
-  labs(title="Número de reclamos totales por mes de Buses, Taxis, Carga Pesada y Liviana.",
-       subtitle = "Reclamos Seguro Obligatorio de Vehículos Automotores (SOA)",
-       caption = "Fuente: Elaboración propia con datos de SUGESE")+
-  xlab("Fecha de reclamo") + 
-  ylab("Total de reclamos")+theme(legend.position="bottom")+scale_color_hue(labels = c( "Bus Remunerado","Carga Liviana","Carga Pesada","Taxis"))+theme(legend.background = element_rect(fill = "lightblue", # Fondo
-                                                                                                                                                                                         colour = 1))+        # Borde
-  theme(legend.title = element_text(family = "Roboto",
-                                    color = "blue", 
-                                    size = 10,
-                                    face = 2))
+  # Gráfico
+  ggplot(
+    pivot_longer(
+      dplyr::select(reclamos, Motos, Particular, Fecha),
+      cols = c("Particular", "Motos"), 
+      names_to = "Tipo", 
+      values_to = "Reclamos"
+    ), 
+    aes(x = Fecha, y = Reclamos, colour = Tipo)
+  ) +
+    geom_line() +
+    geom_point() +
+    labs(
+      title = "Reclamos mensuales al SOA, vehículos particulares y motos.",
+      caption = "Fuente: Elaboración propia con datos de SUGESE"
+    ) +
+    xlab("Fecha de reclamo") +
+    ylab("Total de reclamos") +
+    theme(legend.position = "bottom") +
+    scale_color_hue(labels = c("Motos", "Auto Particular")) +
+    theme(
+      legend.background = element_rect(fill = "lightblue", colour = 1),
+      legend.title = element_text(
+        family = "Roboto",
+        color = "blue", 
+        size = 10,
+        face = 2
+      )
+    )+ theme_minimal()
+  
+  
+  ggplot(
+    pivot_longer(
+      dplyr::select(reclamos, Fecha, Taxis, Carga_Liviana, Carga_Pesada, Bus_remunerado),
+      cols = c("Taxis", "Carga_Liviana", "Carga_Pesada", "Bus_remunerado"),
+      names_to = "Tipo",
+      values_to = "Reclamos"
+    ),
+    aes(x = Fecha, y = Reclamos, colour = Tipo)
+  ) +
+    geom_line() +
+    labs(
+      title = "Número de reclamos totales por mes de Buses, Taxis, Carga Pesada y Liviana.",
+      subtitle = "Reclamos Seguro Obligatorio de Vehículos Automotores (SOA)",
+      caption = "Fuente: Elaboración propia con datos de SUGESE"
+    ) +
+    xlab("Fecha de reclamo") +
+    ylab("Total de reclamos") +
+    theme(legend.position = "bottom") +
+    scale_color_hue(labels = c("Bus Remunerado", "Carga Liviana", "Carga Pesada", "Taxis")) +
+    theme(
+      legend.background = element_rect(fill = "lightblue", colour = 1),
+      legend.title = element_text(
+        family = "Roboto",
+        color = "blue", 
+        size = 10,
+        face = 2
+      )
+    )+ theme_minimal()
+  
 a<-ggplot(reclamos, aes(x = Total)) +
   geom_density(color="#8B0A50")+
   labs(title="Costa Rica: Densidad del número total de reclamos por mes entre \n Enero 2017 y Agosto 2024",
@@ -176,3 +205,14 @@ resultado_prueba <- ad.test(muestra)
 
 
 resultado_prueba
+
+# Verifica los nombres de las columnas
+names(reclamos)
+
+ggplot(mutate(reclamos, Year = as.character(Year), Mes = as.integer(Mes) ))+geom_point(aes(x=Mes, y=Total, color=Year))+
+  geom_line(aes(x=Mes, y=Total, color=Year))+labs(title="Número de reclamos totales por año",
+                                                  subtitle = "Reclamos Seguro Obligatorio de Vehículos Automotores (SOA)",
+                                                  caption = "Fuente: Superintendencia Nacional de Seguros(SUGESE)")+
+  xlab("Mes de reclamo") + 
+  ylab("Total de reclamos")+theme(legend.position="bottom") + theme_minimal()
+

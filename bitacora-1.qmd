@@ -1,0 +1,58 @@
+# Bitácora 1
+
+\<## Pregunta de Investigación
+
+### Definición de la idea
+
+La gestión del riesgo asociado a los seguros de automóviles, especialmente bajo esquemas obligatorios como el Seguro Obligatorio de Automotores (SOA) en Costa Rica, representa un desafío significativo para las entidades aseguradoras. El SOA es esencial no solo para cubrir gastos médicos derivados de accidentes de tráfico, sino también como componente clave del portafolio del Instituto Nacional de Seguros (INS). Este contexto subraya la necesidad de emplear metodologías actuariales avanzadas que promuevan la sostenibilidad financiera del seguro.
+
+### Conceptualización de la idea
+
+Analizar la evolución de la frecuencia del seguro obligatorio automotor en Costa Rica para el periodo 2017-2024. Según la RAE [@rae], se pueden definir los siguientes conceptos:
+
+-   **Seguro**: Contrato por el cual una de las partes se obliga, mediante el pago de una prima, a indemnizar a la otra en el caso de que ocurra el evento previsto.
+-   **Análisis**: Descomposición de un todo en sus partes o elementos para su estudio.
+-   **Frecuencia**: Repetición de un evento en un periodo determinado de tiempo.
+-   **Evolución**: Serie de transformaciones continuas que va experimentando la naturaleza y los seres que la componen.
+
+### Identificación de tensiones
+
+-   La conclusión ofrecerá una visión general de la evolución del seguro obligatorio automotor en Costa Rica para el periodo 2017-2024, pero no necesariamente será representativa de una manera global.
+-   La base de datos no contempla el valor económico para todas las subdivisiones que describe (sí para bastantes, pero no para todas de manera absoluta).
+
+### Reformulación de la idea en forma de pregunta
+
+-   ¿Cuál es la evolución del seguro obligatorio automotor en Costa Rica para el periodo de 2017 a 2024?
+-   ¿Qué método estadístico se puede emplear para evaluar la evolución del seguro obligatorio automotor en Costa Rica para el periodo de 2017 a 2024?
+-   ¿Cuál es la forma adecuada de visualizar la evolución del seguro obligatorio automotor en Costa Rica para el periodo de 2017 a 2024?
+-   ¿Resulta importante determinar la evolución del seguro obligatorio automotor en Costa Rica para el periodo de 2017 a 2024?
+
+### Argumentación a través de datos
+
+-   **Fuente de información**: Repositorio de estadísticas de la Superintendencia General de Seguros de Costa Rica.
+-   **Contexto temporal y espacial de los datos**: De enero de 2017 a agosto de 2024 en Costa Rica.
+-   **Facilidad de obtener la información**: Alta. El repositorio presenta una fácil accesibilidad a los datos y una amplia exposición de los mismos.
+-   **Población de estudio**: Accidentes reportados al Instituto Nacional de Seguros los cuales amparan el Seguro Obligatorio Automotor.
+-   **Unidad estadística o individuos**: Cada accidente reportado al Instituto Nacional de Seguros los cuales amparan el Seguro Obligatorio Automotor.
+
+## Revisión bibliográfica
+
+### Construcción de fichas de literatura
+
+#### Ficha de literatura 1
+
+| **Encabezado**                           | **Contenido**                                                                                                                                                |
+|------------------|------------------------------------------------------|
+| **Título**                               | Reglamento Solvencia Entidades de Seguros y Reaseguros.                                                                                                      |
+| **Autor(es)**                            | Superintendencia General de Seguros de Costa Rica                                                                                                            |
+| **Año**                                  | 2013                                                                                                                                                         |
+| **Nombre del tema**                      | Reglamento el cual cada aseguradora se suscribe para mantener solvencia financiera y actuarial.                                                              |
+| **Cronológica**                          | 2013                                                                                                                                                         |
+| **Metodológica**                         |                                                                                                                                                              |
+| **Temática**                             |                                                                                                                                                              |
+| **Teórica**                              | Implicaciones de la ley que rige el objeto de estudio el cual se pretende realizar.                                                                          |
+| **Resumen en una oración**               | Permite tener un marco de referencia para revisar todos los requerimientos y las                                                                             |
+| **Argumento central**                    | Brinda una perspectiva técnica, actuarial y para brindar estadísticas y requerimientos necesarios para el buen funcionamiento de las entidades aseguradoras. |
+| **Problemas con el argumento o el tema** | Se circunscribe a Costa Rica solamente                                                                                                                       |
+| **Resumen en un párrafo**                | Un reglamento que determina las pautas para que las aseguradoras, reaseguradoras, corredurías e intermediarios mantengan solvencia y salud financiera.       |
+
